@@ -1,0 +1,81 @@
+@font-face{
+    src: url(fonts/Roboto-Regular.ttf);
+    font-family: "Roboto";
+}
+@font-face{
+src: url(fonts/SF-UI-Display.ttf);
+font-family: 'SF-UI-Display';
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+body * {
+    box-sizing: border-box;
+}
+.title{
+    font-family: "SF-UI-Display";
+    font-style: normal;
+    font-weight: normal;
+}
+.header{
+    width: 360px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: #FAFAFA;
+}
+
+.header_button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: white;
+}
+.header_title{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 83px;
+}
+.error_img{
+    width: 80px;
+    height: 80px;
+    margin-top: 51px;
+}
+.error{
+    width: 360px;
+    height: auto;
+    text-align: center;
+}
+.err_but{
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    background: #EF5350;
+    border-radius: 66px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 400px;
+}
+.err_title{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+.err_subtitle{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 4px;
+    margin-bottom: 97px;
+}

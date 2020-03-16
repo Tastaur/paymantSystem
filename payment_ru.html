@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="startTimer()">
+    <header class="header">
+        <button class="header_button">&lt;</button>
+        <h2 class="header_title title">Оплата</h2>
+    </header>
+    <section class="payment">
+        <div class="payment_head">
+            <img src="icons/logo.png" alt="gurman_logo" class="gurman_logo">
+            <div class="payment_head_title">
+                <div id="amount" class="amount title">120,<span class="amount_sec">00 ₽</span></div>
+                <div id="orderNumber" class="title"> №1442_164</div>
+                <div id="description" class="title">SO_GURMAN</div>
+            </div>
+            <img src="icons/bank_logo.png" alt="" class="bank_logo">
+        </div>
+        <div class="payment_container">
+        <form name="PaymentForm" action="#" method="post" id="formPayment" class="paymentForm">
+            <input type="hidden" id="expiry">
+            <input type="hidden" id="mdOrder">
+            <input type="hidden" id="location" value="/../">
+            <input type="hidden" id="language" value="ru">
+            <input name="$PAN" id="iPAN" maxlength="19" type="text" autocomplete="off" placeholder="Номер карты" class="cardNum">
+            <div class="selectdate">
+                <select name="MM" id="month"class='month' >
+                    <option value="01" > 1 - январь</option>
+                    <option value="02"> 2 - февраль</option>
+                    <option value="03"> 3 - март</option>
+                    <option value="04"> 4 - апрель</option>
+                    <option value="05"> 5 - май</option>
+                    <option value="06"> 6 - июнь</option>
+                    <option value="07"> 7 - июль</option>
+                    <option value="08"> 8 - август</option>
+                    <option value="09"> 9 - сентябрь</option>
+                    <option value="10">10 - октябрь</option>
+                    <option value="11">11 - ноябрь</option>
+                    <option value="12">12 - декабрь</option>
+                    <option value="13" selected>Месяц</option>
+                    </select> /
+                    <select name="YYYY" id="year" >
+                    <option value='2012' >2012</option>
+                    <option value='2013'>2013</option>
+                    <option value='2014'>2014</option>
+                    <option value='2015'>2015</option>
+                    <option value='2016'>2016</option>
+                    <option value='2017'>2017</option>
+                    <option value='2018'>2018</option>
+                    <option value='2019'>2019</option>
+                    <option value='2020'>2020</option>
+                    <option value='2021'>2021</option>
+                    <option value='2022'>2022</option>
+                    <option value='2023' selected>Год</option>
+                    </select>
+            </div>
+            <input name="$CVC" id="iCVC" maxlength="3" type="password" autocomplete="off" placeholder="CVV/CVC" class="CVC">
+            <div class="informTable title hide">3 последние цифры на обратной стороне карты <button onclick="hideInfo()" class = "informtable_button"></button></div>
+            <button class="inform" onclick="clickInfo()"></button>
+            </form>
+            <form id="acs" method="post" action="">
+            <label class="cardMem">
+                <input class="checkbox" type="checkbox"  id="createBinding">
+                <span class="fake"></span>
+                <span for="check"> Запомнить эту карту</span>
+            </label>
+            <div id="errorBlock" style="color:red;"></div>
+            <input class="payment_button title button"value="Оплатить" type="button" id="buttonPayment">
+            <div id="infoBlock"></div>
+            <div id="indicator" style="display:none;"><img src="../../img/ajax-loader.gif" height="19" width="220" alt="indicator"></div>
+            <div class="count title">
+                <span>До окончании сессии</span>
+                <div id="countdown">20:00</div>
+            </div>
+        </div>          
+    </section>
+    <footer class='phone_keyboard'></footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

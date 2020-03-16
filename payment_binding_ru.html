@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment_bidding</title>
+    <link rel="stylesheet" href="css\style_binding.css">
+</head>
+<body onload="startTimer()">
+    <header class="header">
+        <button class="header_button">&lt;</button>
+        <h2 class="header_title title">Оплата</h2>
+    </header>
+    <section class="payment">
+        <div class="payment_head">
+            <img src="icons/logo.png" alt="gurman_logo" class="gurman_logo">
+            <div class="payment_head_title">
+                <div id="amount" class="amount title">120,<span class="amount_sec">00 ₽</span></div>
+                <div id="orderNumber" class="title"> №1442_164</div>
+                <div id="description" class="title">SO_GURMAN</div>
+            </div>
+            <img src="icons/bank_logo.png" alt="" class="bank_logo">
+        </div>
+        <div class="payment_container">
+        <form name="PaymentForm" action="" method="post" id="bindingPaymentForm" class="paymentForm">
+            <p class="paymentForm_title title">Ваша карта</p>
+            <div class="paymentFormString">
+                <div class="numberCard title"id="maskedPan">**** 4862</div>
+                <input name="$CVC" id="iCVC" maxlength="3" type="password" autocomplete="off" placeholder="CVV/CVC" class="CVC_bind">
+                <button class="inform" onclick="clickInfo()"></button>
+            </div>
+        </div>
+            <div class="informTable title hide">3 последние цифры на обратной стороне карты <button onclick="hideInfo()" class = "informtable_button"></button></div>
+            </form>
+            <form id="acs" method="post" action="">
+                <input type="hidden" id="MD" name="MD"/>
+                <input type="hidden" id="PaReq" name="PaReq"/>
+                <input type="hidden" id="TermUrl" name="TermUrl"/>
+            </form>
+            <div id="errorBlock" style="color:red;"></div>
+            <div id="infoBlock"></div>
+            <div id="indicator" style="display:none;"><img src="" height="19" width="220" alt="indicator"></div>
+            <input onclick="cvcErr()" class="payment_button title button"value="Оплатить" type="button" id="sendPayment">
+            <div class="count title">
+                <span>До окончании сессии</span>
+                <div id="countdown">20:00</div>
+            </div>
+        </div>          
+    </section>
+    <footer class='phone_keyboard'></footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

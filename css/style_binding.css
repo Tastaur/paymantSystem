@@ -1,0 +1,213 @@
+@font-face{
+    src: url(fonts/Roboto-Regular.ttf);
+    font-family: "Roboto";
+}
+@font-face{
+src: url(fonts/SF-UI-Display.ttf);
+font-family: 'SF-UI-Display';
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+body * {
+    box-sizing: border-box;
+}
+.title{
+    font-family: "SF-UI-Display";
+    font-style: normal;
+    font-weight: normal;
+}
+.button{
+    cursor: pointer;
+}
+.header{
+    width: 360px;
+    height: 50px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: #FAFAFA;
+}
+
+.header_button{
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    background-color: white;
+}
+.header_title{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 120px;
+}
+.payment{
+    width: 360px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 8px;
+    padding-left: 8px;
+    
+}
+.payment_head{
+    height: 160px;
+    width: 344px;
+    background: linear-gradient(179.62deg, #D8E4EA 0.75%, #FAFAFA 99.34%), linear-gradient(90deg, #536976 0%, #292E49 100%);
+    border-radius: 40px 40px 0px 0px;
+    display: flex;
+    padding-top: 27px;
+    padding-left: 27px;
+    padding-right: 33px;
+}
+.payment_container{
+    background: rgb(250, 249, 249);
+}
+.gurman_logo{
+    height: 52px;
+}
+.bank_logo{
+    height: 34px;
+    margin-left: 104px;
+}
+.payment_head_title{
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 14px;
+}
+.amount{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+.amount_sec{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: gray;
+}
+.paymentForm{
+    width: 336px;
+    height: 145px;
+    background-color: white;
+    margin-top: -70px;
+    margin-left: 3px;
+    border-radius: 12px;
+    padding-top: 35px;
+    padding-left: 18px;
+ 
+}
+.paymentForm_title{
+    font-size: 16px;
+    line-height: 19px;
+    color: #BEBEBE;
+}
+.numberCard{
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.2em;
+    color: #BEBEBE;
+    margin-top: 39px;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-family: "Roboto";
+    color: #BEBEBE;
+
+}
+
+::-webkit-input-placeholder{
+    color: #BEBEBE;
+}
+.paymentFormString{
+    display: flex;
+}
+.CVC_bind{
+    width: 120px;
+    height: 36px;
+    background: #FFFFFF;
+    border: 1px solid #BEBEBE;
+    border-radius: 6px;
+    padding: 10px 22px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.CVC_bind_err{
+    border: 1px solid red;
+}
+.inform{
+    background-image: url(../icons/info.png);
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    border: none;
+    background-color: white;
+    margin-left: 8px;
+    margin-top: 27px;
+}
+
+
+.payment_button{
+    margin-top: 40px;
+    width: 150px;
+    height: 40px;
+    background: #EF5350;
+    border-radius: 66px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 106px;
+}
+.count{
+    margin-top: 40px;
+    margin-left: 100px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999999;
+    flex-direction: row;
+    display: flex;
+}
+.phone_keyboard{
+    background-image: url(../icons/footer.png);
+    background-size: cover;
+    width: 360px;
+    height: 203px;
+    margin-top: 70px;
+}
+#countdown{
+    margin-left: 2px;
+}
+.informTable{
+    position: absolute;
+    width: 227px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin-top: 35px;
+    margin-left: 107px;
+    display: flex;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 15px;    
+}
+.informtable_button{
+    background-image: url(../icons/close_inf.png);
+    background-size: cover;
+    width: 28px;
+    height: 21px;
+    border: none;
+    background-color: white;
+
+}
+.hide{
+    display: none;
+}
