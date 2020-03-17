@@ -31,15 +31,16 @@ let hideInfo = ()=>{
     return infoButton.classList.add('hide')
 }
 
-const cvcBind = document.querySelector('.CVC_bind');
-let cvcInput = cvcBind.innerHTML;
-let cvcErr =()=>{
+const btn = document.querySelector('#sendPayment');
+const cvcBind = document.querySelector('#iCVC');
+
+btn.onclick = () => {
+	const cvcInput = cvcBind.value;
   event.preventDefault();
   if(cvcInput !== ""){
-    cvcBind.classList.remove('CVC_bind_err')
-  }
-    if(cvcInput===""){
-    return cvcBind.classList.add('CVC_bind_err')
+  cvcBind.classList.remove('CVC_bind_err')
+  } else {
+  return cvcBind.classList.add('CVC_bind_err')
   }
 }
 
