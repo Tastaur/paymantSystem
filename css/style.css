@@ -118,6 +118,11 @@ input{
     color: #BEBEBE;
     width: 300px;
 }
+.cardNum:focus::-webkit-input-placeholder{
+    transform: translate(0,-12px);
+    font-size: 12px;
+    transition-duration: .5s;
+}
 select{
     margin-top: 31px;
     border: none;

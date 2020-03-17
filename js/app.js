@@ -35,11 +35,11 @@ const cvcBind = document.querySelector('.CVC_bind');
 let cvcInput = cvcBind.innerHTML;
 let cvcErr =()=>{
   event.preventDefault();
-  if(cvcInput == ""){
-    cvcBind.classList.add('CVC_bind_err')
+  if(cvcInput !== ""){
+    cvcBind.classList.remove('CVC_bind_err')
   }
-    if(cvcInput!==""){
-    return cvcBind.classList.remove('CVC_bind_err')
+    if(cvcInput===""){
+    return cvcBind.classList.add('CVC_bind_err')
   }
 }
 
