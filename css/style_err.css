@@ -6,7 +6,10 @@
 src: url(fonts/SF-UI-Display.ttf);
 font-family: 'SF-UI-Display';
 }
-
+.containerApp{
+    width: 500px;
+    margin: 0 auto; 
+}
 body{
     margin: 0;
     box-sizing: border-box;
@@ -64,6 +67,11 @@ body * {
     font-size: 16px;
     line-height: 19px;
     margin-bottom: 400px;
+    outline: none;
+    cursor: pointer;
+}
+.err_but:active{
+    background:rgba(239, 83, 80, 0.534) ;
 }
 .err_title{
     font-weight: bold;

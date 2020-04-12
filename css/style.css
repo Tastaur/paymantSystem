@@ -14,6 +14,11 @@ body{
 body * {
     box-sizing: border-box;
 }
+.containerApp{
+    width: 500px;
+    margin: 0 auto; 
+}
+
 .title{
     font-family: "SF-UI-Display";
     font-style: normal;
@@ -112,17 +117,38 @@ input{
     color: #BEBEBE;
 
 }
+
+.cardInput{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .cardNum{
     font-size: 14px;
     line-height: 17px;
     color: #BEBEBE;
     width: 300px;
+    z-index: 2;
+    background: none;
 }
-.cardNum:focus::-webkit-input-placeholder{
-    transform: translate(0,-12px);
+.label{
+    position:absolute;
+    transition:.2s ;
+    top: -3px;
+    font-size: 14px;
+    color: #BEBEBE;
+}
+.cardNum:focus ~ .label,
+.cardNum:not(:placeholder-shown) ~ .label{
+    top: -15px;
     font-size: 12px;
-    transition-duration: .5s;
 }
+
+
+::-webkit-input-placeholder{
+    color: #BEBEBE;
+}
+
 select{
     margin-top: 31px;
     border: none;
@@ -137,9 +163,7 @@ select{
     line-height: 17px;
     color: #BEBEBE;
 }
-::-webkit-input-placeholder{
-    color:#BEBEBE
-}
+
 .month{
     text-align: right;
 }
@@ -221,6 +245,9 @@ select{
     line-height: 19px;
     margin-left: 106px;
 }
+.payment_button:active{
+    background:rgba(239, 83, 80, 0.534) ;
+}
 .count{
     margin-top: 40px;
     margin-left: 100px;
@@ -257,8 +284,8 @@ select{
 .informtable_button{
     background-image: url(../icons/close_inf.png);
     background-size: cover;
-    width: 28px;
-    height: 21px;
+    width: 29px;
+    height: 22px;
     border: none;
     background-color: white;
 
