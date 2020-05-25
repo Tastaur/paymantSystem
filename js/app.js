@@ -30,7 +30,6 @@ let hideInfo = ()=>{
     event.preventDefault();
     return infoButton.classList.add('hide')
 }
-
 const btn = document.querySelector('#sendPayment');
 const cvcBind = document.querySelector('#iCVC');
 
@@ -43,4 +42,7 @@ btn.onclick = () => {
   return cvcBind.classList.add('CVC_bind_err')
   }
 }
+
+
+
 
